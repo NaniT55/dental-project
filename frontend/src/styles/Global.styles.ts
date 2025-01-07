@@ -2,10 +2,12 @@ import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+    
   body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    padding:0;
+    font-family: 'Poppins', serif;
+    background-color: #F1F8FF;
   }
 `;
 
@@ -14,7 +16,7 @@ export const TopNavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #f0f0f0;
+  background-color: #F1F8FF;
   border-bottom: 1px solid #052a44;
   position: sticky;
   top: 0;
@@ -37,11 +39,11 @@ export const TextWrapper = styled.div`
 
   p {
     margin: 0;
-    font-size: 22px;
+    font-size: 12px;
     color: #052a44;
   }
   svg {
-    font-size: 22px;
+    font-size: 16px;
     cursor: pointer;
     color: #052a44;
   }
@@ -53,7 +55,7 @@ export const RightSection = styled.div`
   gap: 25px;
 
   svg {
-    font-size: 26px;
+    font-size: 22px;
     cursor: pointer;
     color: #052a44;
 
@@ -64,7 +66,7 @@ export const RightSection = styled.div`
 `;
 
 export const FooterContainer = styled.footer`
-  background: linear-gradient(to top, #f0fdfa, #ffffff);
+  background: #F1F8FF;
   padding: 2rem 1rem;
   text-align: center;
   
@@ -172,5 +174,73 @@ export const Copyright = styled.p`
     &:hover {
       text-decoration: underline;
     }
+  }
+`;
+
+export const NavbarContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #F1F8FF; 
+  position: sticky;
+  top: 8%;
+  left: 7%;
+  width: 80%;
+  z-index: 100;
+`;
+
+export const LogoContainer = styled.div`
+  img {
+    width: 150px; 
+    cursor: pointer;
+  }
+`;
+
+export const NavLinks = styled.ul`
+  display: flex;
+  list-style: none;
+  gap: 20px; 
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+
+    &:hover {
+      color: #0073e6; 
+    }
+  }
+`;
+
+export const ContactButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+
+  svg {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background-color: #005bb5; 
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+
+  p {
+    margin: 0;
   }
 `;
